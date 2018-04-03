@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "02935465-4495-4677-8921-270e01edc16e",
+		"name": "OnlineAuction",
+		"description": "online auction requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getHighestBidder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"itemId\":\"1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/getHighestBidder",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getHighestBidder"
+					]
+				},
+				"description": "get highest bidder at the auction"
+			},
+			"response": []
+		},
+		{
+			"name": "getHighestBid",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"itemId\":\"1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/getHighestBid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getHighestBid"
+					]
+				},
+				"description": "get the highest bid at the auction for a particular item"
+			},
+			"response": []
+		},
+		{
+			"name": "getBalance",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fromAddress\":\"0x0947cc62d6a3617891f942260ad7ffc4faa3d04e\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/getBalance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getBalance"
+					]
+				},
+				"description": "get current balance"
+			},
+			"response": []
+		},
+		{
+			"name": "bid",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"itemId\":\"2\",\n\t\"bidAmount\":\"1000000000000000000\",\n\t\"fromAddress\":\"0x4e857660cc3e8bd89e7f0263b700e8cd85f28d73\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/bid",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"bid"
+					]
+				},
+				"description": "bid on an item"
+			},
+			"response": []
+		},
+		{
+			"name": "startAuction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"itemId\":\"1\",\n\t\"fromAddress\":\"0x89c12e06bf087fb1fbe76271c577be7f58cd5f0d\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/startAuction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"startAuction"
+					]
+				},
+				"description": "start an auction for a particular item"
+			},
+			"response": []
+		},
+		{
+			"name": "closeAuction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"itemId\":\"1\",\n\t\"fromAddress\":\"0x0947cc62d6a3617891f942260ad7ffc4faa3d04e\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/closeAuction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"closeAuction"
+					]
+				},
+				"description": "close auction for a given item"
+			},
+			"response": []
+		},
+		{
+			"name": "setBeneficiary",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"itemId\":\"1\",\n\t\t\"beneficiary\":\"0xafc80683db5b6f07dbfc49a2f688891eee0bae2e\",\n\t\t\"fromAddress\":\"0x0947cc62d6a3617891f942260ad7ffc4faa3d04e\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/setBeneficiary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"setBeneficiary"
+					]
+				},
+				"description": "set a beneficiary for a given item"
+			},
+			"response": []
+		},
+		{
+			"name": "getBeneficiary",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"itemId\":\"\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/getBeneficiary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"getBeneficiary"
+					]
+				},
+				"description": "get the address to which the amount will be sent at the end of an auction for a particular item"
+			},
+			"response": []
+		}
+	]
+}
